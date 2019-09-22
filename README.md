@@ -30,12 +30,12 @@ Code: classify.py \
 csv_file與target_folder請手動更改程式碼，分別為valence與arousal兩種
 
 ## 5. 進行訓練
-在訓練開始前，可以選擇是否要進行10 cross folder validation的步驟
-如需要進行10 cross folder validation, 請自行將資料依照使用者偏好的比例分成十份
-並建立與編入10CrossFolderValidation目錄
-後使用 CNN_10FCV_Train.py 進行資料訓練
+在訓練開始前，可以選擇是否要進行10 cross folder validation的步驟\
+如需要進行10 cross folder validation, 請自行將資料依照使用者偏好的比例分成十份\
+並建立與編入10CrossFolderValidation目錄\
+後使用 CNN_10FCV_Train.py 進行資料訓練\
 訓練好後會將訓練權重輸出在執行訓練的目錄之下, 名稱為 CNN_10FCV_CQT_Final.h5
 
 ## 6. 進行預測
-使用Predict Script進行預測
+使用Predict Script進行預測\
 Code: Predict_script
