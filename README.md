@@ -38,4 +38,4 @@ csv_file與target_folder請手動更改程式碼，分別為valence與arousal兩
 
 ## 6. 進行預測
 使用Predict Script進行預測\
-Code: Predict_script
+Code: Predict_script.py
