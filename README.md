@@ -39,3 +39,22 @@ csv_file與target_folder請手動更改程式碼，分別為valence與arousal兩
 ## 6. 進行預測
 使用Predict Script進行預測\
 Code: Predict_script.py
+
+
+## step 1. Getting data
+Source: Emotion in Music Database (1000 songs) \
+Please go to http://cvml.unige.ch/databases/emoMusic/ to apply for downlading raw data
+
+## step 2. Signal transfer
+Code: feature.py\
+Using python package "librosa" to transfer music signal into music feature\
+featur.py need to save file at local folder\
+please create a folder called "SourceData"\
+Under the SourceData, please create folders, and named them as "SFTF", "CQT", "MFCC", "MFCC_DELTA", "Chroma_STFT", "Chroma_CQT"
+
+## Data Segmentation
+Code: Cut45sec.py
+Using python package call "PIL" to splite data\
+The Cut45sec.py will output a image, which is 5 sec with 50% overlapping\
+This script still need to save file at local folder\
+Please creat a folder called "5secWith50
