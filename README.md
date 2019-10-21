@@ -52,9 +52,32 @@ featur.py need to save file at local folder\
 please create a folder called "SourceData"\
 Under the SourceData, please create folders, and named them as "SFTF", "CQT", "MFCC", "MFCC_DELTA", "Chroma_STFT", "Chroma_CQT"
 
-## Data Segmentation
+## step 3. Data Segmentation
 Code: Cut45sec.py
 Using python package call "PIL" to splite data\
 The Cut45sec.py will output a image, which is 5 sec with 50% overlapping\
 This script still need to save file at local folder\
-Please creat a folder called "5secWith50
+Please creat a folder called "5secWith50paOverlapping"
+
+## step 4. Data Classification
+Code: Classify.py\
+The next step is to classify the cut time segments.\
+Please create a folder MLdata first.\
+And in this directory, please create following folder: STFT, CQT, MFCC, MEFF_DELTA, Chroma_STFT, Chroma_CQT\
+In these directories,create A and V directories.\
+under the folder, create RAW, train, test, validation in these two directories.\
+And in these four directories, create a total of 21 folders -1.0, -0.9, -0.8, -0.7, ..., 0.8, 0.9, 1.0, etc.
+The source code used is \
+Code: classify.py \
+csv_file and target_folder, please manually change the code into valence and arousal
+
+## 5. Training
+Before the start of the training, you can choose whether you want to perform the 10 cross folder validation step\
+If you need to carry out 10 cross folder validation, please divide the data into ten according to the user's preference.\
+And build and compile into the 10CrossFolderValidation directory\
+After using CNN_10FCV_Train.py for data training\
+After training, the training weights will be output under the directory of the training, named CNN_10FCV_CQT_Final.h5\
+
+## 6. Forecasting
+Predict using Predict Script\
+Code: Predict_script.py
